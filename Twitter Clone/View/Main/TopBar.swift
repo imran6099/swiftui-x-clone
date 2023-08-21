@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct TopBar: View {
+    @Binding var x: CGFloat
+    
     var body: some View {
         VStack {
             HStack {
                 Button (action: {
-                    
+                    x = 0;
                 }, label: {
                     Image(systemName: "line.3.horizontal")
                         .font(.system(size: 24))
@@ -35,11 +37,5 @@ struct TopBar: View {
             Divider()
              
         }.background(.white)
-    }
-}
-
-struct TopBar_Previews: PreviewProvider {
-    static var previews: some View {
-        TopBar()
     }
 }
