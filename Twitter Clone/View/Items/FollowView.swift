@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct FollowView: View {
+    var count: Int
+    var title: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(count)")
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+            
+            Text(title)
+                .foregroundColor(.gray) 
+        }
     }
 }
 
-struct FollowView_Previews: PreviewProvider {
-    static var previews: some View {
-        FollowView()
-    }
-}
+
